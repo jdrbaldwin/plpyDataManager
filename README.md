@@ -7,10 +7,10 @@ plpyDataManager aims to make it easy to store and retreive json objects when wor
 Terms/concepts are in line with MongoDB - json 'documents' are stored in 'collections' using an 'id' for storage/retrieval
 
 Python functions are created and stored in GD so that they may be invoked easily without calling plpy.execute():
-* GD['save'](collection,id,document) - save json
-* document = GD['load'](collection,id) - retrieve json
-* GD['drop'](collection) - remove a collection
-* iscached = GD['iscached'](collection,id) - check if json is available in a cache or stored only in a table
+* GD\['save'\]\(collection,id,document\) - save json
+* document = GD\['load'\]\(collection,id\) - retrieve json
+* GD\['drop'\]\(collection\) - remove a collection
+* iscached = GD\['iscached'\]\(collection,id\) - check if json is available in a cache or stored only in a table
 
 Data is stored in a database table and cached in GD for up to 5 days:
 * a table named datamgr_{collection} is created on the fly when a collection is first used
