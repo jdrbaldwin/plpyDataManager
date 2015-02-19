@@ -18,7 +18,7 @@ myuserdata = {'id':123,'firstName':'Joe','lastName':'Bloggs','friends':['Sam','J
 # it will be created on the fly as required
 # syntax: GD["save"](collection,id,doc)
 
-GD["save"]('users','123',somedata)
+GD["save"]('users','123',myuserdata)
 
 # the data will be cached in GD for easy retrieval
 # any data not accessed for 5 days will be removed from the cache automatically
