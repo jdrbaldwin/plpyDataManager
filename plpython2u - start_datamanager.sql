@@ -121,6 +121,7 @@ def fsave(collection,id,doc):
             try:
                 # close off any current record
                 plpy.execute("UPDATE datamgr_%s SET is_current = False WHERE id = '%s' and is_current = True;" % (collection,id))
+                plpy.execute("COMMIT;")
                 plpy.execute("INSERT INTO datamgr_%s (id,doc,is_current,created_date) VALUES ('%s','%s',True,'%s');" % (collection,id,json.dumps(doc),ts))
             except:
                 return False
